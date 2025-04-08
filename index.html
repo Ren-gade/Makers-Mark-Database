@@ -1,0 +1,363 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://kit.fontawesome.com/c4782fc234.js" crossorigin="anonymous"></script>
+ </head>
+ <style>
+.header-wrapper {
+    display: none !important;
+}
+
+footer.footer {
+    display: none !important;
+}
+
+@media print {
+    .table,
+    .table__body {
+        overflow: visible;
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store-header {
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px; /* Adjust the size as needed */
+}
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0);
+    color: white;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__header .input-group {
+    width: 35%;
+    height: 100%;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__header .input-group img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+}
+
+td img {
+    width: 175px;
+    height: 175px;
+    border-radius: 5%;
+    vertical-align: middle;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #9c78eafe;
+    text-transform: capitalize;
+}
+
+td a {
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+@media (max-width: 600px) {
+    .table__body {
+        max-height: unset;
+    }
+
+    td img {
+        max-width: 70px; /* Adjust the max-width for smaller images */
+        height: auto;
+    }
+
+    table,
+    th,
+    td {
+        padding: 5px;
+    }
+
+    td:not(:first-of-type) {
+        min-width: 80px;
+    }
+}
+</style>
+ <body>
+   <div class="store-header">
+    <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/logo_white.png?v=1709629436" alt="Ren Craft Logo" class="logo">
+   </div>
+<nav class="navbar">
+    <a href="https://www.rencraft.ca">Home</a>
+    <a href="https://www.jotform.com/240640661368053">Register my mark</a>
+</nav>
+                                                               
+     <main class="table" id="customers_table">
+         <section class="table__header">
+                <div class="input-group">
+                 <input type="search" placeholder="Search">
+                 <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+             </div>
+              </section>
+         <section class="table__body">
+             <table>
+                 <thead>
+                     <tr>
+                         <th> Maker's Mark</th>
+                         <th> Name</th>
+                         <th> Contact</th>
+                         <th> Tags</th>
+                          </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td><img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/beathan.jpg?v=1712725715" alt=""> </td>
+                         <td>Beathán MacFinnon</td>
+                         <td><a href="mailto:beathanmacfinnon@gmail.com">Email</a> </td>
+                       <td>runes, viking</td>
+                         </tr>
+                         <tr>
+                         <td><img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/iohn.jpg?v=1712725716" alt=""> </td>
+                         <td>Iohn Spooner</td>
+                         <td><a href="mailto:larchmont479@gmail.com">Email</a> </td>
+                       <td>animal, pawprint</td>
+                         </tr>
+                   <tr>
+                         <td><img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/keja.jpg?v=1712725716" alt=""> </td>
+                         <td>Keja</td>
+                         <td><a href="mailto:info@horuseyepottery.ca">Email</a> </td>
+                       <td>egypt, hieroglyph, eye</td>
+                         </tr>
+                    <td><img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/rhys.jpg?v=1712725715" alt=""> </td>
+                         <td>Rhys of Anglesey/ Umesaya Soukuro</td>
+                         <td><a href="mailto:rhys.of.anglesey@gmail.com">Email</a> </td>
+                       <td>ram, animal</td>
+                         </tr>
+               <tr>
+                         <td><img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/shannon.jpg?v=1712801127" alt=""> </td>
+                         <td>Shannon Dobbs</td>
+                         <td><a href="mailto:Orlaoshanahan@gmail.com">Email</a> </td>
+                       <td>geometric</td>
+                         </tr>
+               <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/skalli.jpg?v=1713405878"</td>
+                 <td> Skalli Wegg</td>
+                 <td> <a href="mailto:douglaswegg@me.com"> Email </a> </td>
+                 <td> viking, dragon, canada</td>
+               </tr>
+ <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/Artair.jpg?v=1713406094""</td>
+                 <td> Artair McArtair of Orkney </td>
+                 <td> <a href="mailto:skbudge@golden.net"> Email </a> </td>
+                 <td> letters</td>
+               </tr>
+
+                <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/darrell.jpg?v=1713406433"</td>
+                 <td> Darrell Markewitz</td>
+                 <td> <a href="mailto:info@warehamforge.ca"> Email </a> </td>
+                 <td> dots </td>
+               </tr>
+
+                <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/martin.jpg?v=17134065168"</td>
+                 <td> Martin Bildner</td>
+                 <td> <a href="mailto:"> Email (not completed) </a> </td>
+                 <td> animal, circle </td>
+               </tr>
+               <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/Katrina.jpg?v=1713668426"</td>
+                 <td> Katrina Prebensdottir </td>
+                 <td> <a href="mailto:kathy.morch@gmail.com"> Email </a> </td>
+                 <td> viking, rune </td>
+               </tr>
+               <tr>
+                 <td> <img src="https://cdn.shopify.com/s/files/1/0841/6949/0454/files/Frith.png?v=17210136546"</td>
+                 <td> Frithugyth Spreg'c </td>
+                 <td> <a href="mailto:k.kendall@live.ca"> Email </a> </td>
+                 <td> letters </td>
+               </tr>
+                    </tbody>
+             </table>
+         </section>
+       
+     </main>
+     <script> 
+       const search = document.querySelector('.input-group input'),
+    table_rows = document.querySelectorAll('tbody tr'),
+    table_headings = document.querySelectorAll('thead th');
+
+// 1. Searching for specific data of HTML table
+search.addEventListener('input', searchTable);
+
+function searchTable() {
+    table_rows.forEach((row, i) => {
+        let table_data = row.textContent.toLowerCase(),
+            search_data = search.value.toLowerCase();
+
+        row.classList.toggle('hide', table_data.indexOf(search_data) < 0);
+        row.style.setProperty('--delay', i / 25 + 's');
+    })
+
+    document.querySelectorAll('tbody tr:not(.hide)').forEach((visible_row, i) => {
+        visible_row.style.backgroundColor = (i % 2 == 0) ? 'transparent' : '#0000000b';
+    });
+}
+
+// 2. Sorting | Ordering data of HTML table
+
+table_headings.forEach((head, i) => {
+    let sort_asc = true;
+    head.onclick = () => {
+        table_headings.forEach(head => head.classList.remove('active'));
+        head.classList.add('active');
+
+        document.querySelectorAll('td').forEach(td => td.classList.remove('active'));
+        table_rows.forEach(row => {
+            row.querySelectorAll('td')[i].classList.add('active');
+        })
+
+        head.classList.toggle('asc', sort_asc);
+        sort_asc = head.classList.contains('asc') ? false : true;
+
+        sortTable(i, sort_asc);
+    }
+})
+
+
+function sortTable(column, sort_asc) {
+    [...table_rows].sort((a, b) => {
+        let first_row = a.querySelectorAll('td')[column].textContent.toLowerCase(),
+            second_row = b.querySelectorAll('td')[column].textContent.toLowerCase();
+
+        return sort_asc ? (first_row < second_row ? 1 : -1) : (first_row < second_row ? -1 : 1);
+    })
+        .map(sorted_row => document.querySelector('tbody').appendChild(sorted_row));
+}
+
+</script>
+ 
+ </body>
+ 
+ </html>
